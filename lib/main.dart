@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'Anasayfa.dart';
+import 'anasayfa.dart';
 import 'todo_hive_model.dart';
 
 Future<void> main() async {
@@ -14,7 +14,12 @@ Future<void> main() async {
   Hive.registerAdapter(todoHiveModelAdapter());
   await Hive.openBox<todoHiveModel>('liste');
 
-  runApp(const MaterialApp(home: MyApp()));
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {

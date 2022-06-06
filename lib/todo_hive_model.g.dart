@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: camel_case_types
-
 part of 'todo_hive_model.dart';
 
 // **************************************************************************
@@ -20,18 +18,18 @@ class todoHiveModelAdapter extends TypeAdapter<todoHiveModel> {
     };
     return todoHiveModel(
       gorev: fields[0] as String,
-      tarih: fields[1] as String,
+      icerik: fields[1] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, todoHiveModel obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.gorev)
       ..writeByte(1)
-      ..write(obj.tarih);
+      ..write(obj.icerik);
   }
 
   @override

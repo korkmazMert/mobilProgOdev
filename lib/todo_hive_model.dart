@@ -8,14 +8,14 @@ class todoHiveModel extends HiveObject {
   @HiveField(0)
   String gorev;
   @HiveField(1)
-  String tarih;
-  todoHiveModel({required this.gorev, required this.tarih});
+  String icerik;
+  todoHiveModel({required this.gorev, required this.icerik});
 
   Map<String, dynamic> toJson() {
     Map<String, dynamic> data = <String, dynamic>{};
 
     data['gorev'] = gorev;
-    data['tarih'] = tarih;
+    data['icerik'] = icerik;
 
     return data;
   }
